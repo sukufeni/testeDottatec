@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace testedotatec
 {
@@ -12,6 +8,11 @@ namespace testedotatec
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void verificaAcesso(object sender, EventArgs e)
+        {
+            if (Session["Logado"].Equals(true)) Response.Redirect("ListaPessoas.aspx");
         }
     }
 }
