@@ -13,5 +13,10 @@ namespace testedotatec
         {
 
         }
+
+        protected void txtLogin_Authenticate(object sender, AuthenticateEventArgs e)
+        {
+            string sql = "select * from TB_USER";
+        }
     }
 }
