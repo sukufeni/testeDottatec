@@ -1,10 +1,15 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="testedotatec._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <div class="jumbotron" style="background-color:#6b4b30">
-        <img src="Images/dottatec_logo_branca2.png" title="Soluções inteligentes para ensino EaD"/>
+    <br />
+    <br />
+    <div class="col-md-6" style="background-color:#6b4b30">
+        <img src="Images/dottatec_logo_branca2.png" title="Soluções inteligentes para ensino EaD" width="270px" height="103px"/>
+    </div>
+    <div>
         <p class="lead">Tela de Login</p>
+    </div>
+    <div>
     </div>
     <div class="row">
         <div class="col-md-4">

@@ -9,10 +9,5 @@ namespace testedotatec
         {
 
         }
-
-        protected void verificaAcesso(object sender, EventArgs e)
-        {
-            if (Session["Logado"].Equals(true)) Response.Redirect("ListaPessoas.aspx");
-        }
     }
 }
