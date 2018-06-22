@@ -47,12 +47,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">TESTE LOGIN - DOTTATEC</a>
+                    <a class="navbar-brand" runat="server" href="~/">Sistema de gestão de Usuários- DOTTATEC</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Página inicial</a></li>
-                        <li><a runat="server" href="~/Users">Lista de úsuarios</a></li>
                     </ul>
                 </div>
             </div>
