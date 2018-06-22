@@ -2,8 +2,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>TESTE DOTTATEC</h1>
+    <div class="jumbotron" style="background-color:#6b4b30">
+        <img src="Images/dottatec_logo_branca2.png" title="Soluções inteligentes para ensino EaD"/>
         <p class="lead">Tela de Login</p>
     </div>
     <div class="row">
