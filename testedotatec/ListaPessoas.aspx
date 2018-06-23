@@ -1,14 +1,19 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ListaPessoas.aspx.cs" Inherits="testedotatec.ListaPessoas" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <div class="jumbotron" style="background-color:#6b4b30">
-        <img src="Images/dottatec_logo_branca2.png" title="Soluções inteligentes para ensino EaD"/>
-        <p class="lead">Lista Pessoas</p>
-    </div>
-    <div class="row">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="col-md-2"></div>
+    <div class="row col-md-3">
         <div>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="CPF_PESSOA" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" AllowPaging="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="CPF_PESSOA" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" AllowPaging="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="1000px" Height="400px">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
                     <asp:BoundField DataField="CPF_PESSOA" HeaderText="CPF_PESSOA" SortExpression="CPF_PESSOA" ControlStyle-Width="135px">

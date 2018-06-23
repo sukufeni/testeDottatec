@@ -29,3 +29,22 @@ textarea {
         padding: 0;
     }
 }
+.footer {
+    font-size: 10px;
+    color: #808080;
+    text-transform: uppercase;
+
+}
+
+.footer2 {
+    margin: 0 auto;
+    text-align: center;
+    padding: 35px 0;
+}
+
+
+img.ca {
+    
+    -moz-opacity: 0.65;
+    filter: alpha(opacity=65);
+}
