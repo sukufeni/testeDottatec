@@ -15,10 +15,14 @@ namespace testedotatec
                 {
                     carregaCampos(this.cpf);
                     Session["comando"] = "update";
+                    txtNewPassword.Visible = true;
+                    lblNewPassword.Visible = true;
                 }
                 else
                 {
                     Session["comando"] = "insert";
+                    txtNewPassword.Visible = false;
+                    lblNewPassword.Visible = false;
                 }
             }
         }
@@ -32,7 +36,13 @@ namespace testedotatec
         private void atualizaUsuario()
         {
             c = new Conexao();
-            string update = "update tb_pessoa set nome_pessoa = '" + txtNomePessoa.Text + "',email = '" + txtEmailPessoa.Text + "' where cpf_pessoa = '" + txtCpfPessoa.Text + "'";
+            string updatePassword = "";
+            if (!txtPassword.Text.Equals(string.Empty))
+            {
+                if (Session["password"].ToString() == txtPassword.Text) updatePassword = ",password = '" + txtNewPassword.Text + "'";
+                else Alert.Show("a senha atual não coincide com a cadastrada no sistema!");
+            }
+            string update = "update tb_pessoa set nome_pessoa = '" + txtNomePessoa.Text + "',email = '" + txtEmailPessoa.Text + "'"+updatePassword+" where cpf_pessoa = '" + txtCpfPessoa.Text + "'";
             if (verificaCampos())
             {
                 try
@@ -55,7 +65,7 @@ namespace testedotatec
                 var result = c.consultar(ultimo);
                 var login = "";
                 if (result.Read()) login = result["id_login"].ToString();
-                string update = "INSERT INTO [dbo].[TB_PESSOA]([CPF_PESSOA],[NOME_PESSOA],[EMAIL],[ID_LOGIN])VALUES('" + txtCpfPessoa.Text + "','" + txtNomePessoa.Text + "','" + txtEmailPessoa.Text + "','" + login + "')";
+                string update = "INSERT INTO [dbo].[TB_PESSOA]([CPF_PESSOA],[NOME_PESSOA],[EMAIL],[ID_LOGIN],[password])VALUES('" + txtCpfPessoa.Text + "','" + txtNomePessoa.Text + "','" + txtEmailPessoa.Text + "','" + login + "','"+txtPassword.Text+"')";
                 try
                 {
                     if (verificaCampos())
@@ -86,6 +96,7 @@ namespace testedotatec
                 txtCpfPessoa.Text = cpf.ToString();
                 txtEmailPessoa.Text = result["email"].ToString();
                 txtNomePessoa.Text = result["nome_pessoa"].ToString();
+                Session["password"]= result["password"].ToString();
                 txtCpfPessoa.Enabled = false;
                 return true;
             }

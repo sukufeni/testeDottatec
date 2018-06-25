@@ -14,7 +14,7 @@
     <div class="col-md-1"></div>
     <div class="col-md-3">
         <table>
-            <th style="font-size: 15px;border-width:10px;border-color:white">Detalhes do usuário</th>
+            <th style="font-size: 15px; border-width: 10px; border-color: white">Detalhes do usuário</th>
             <tr>
                 <td>
                     <label>CPF do Usuário</label>
@@ -31,7 +31,14 @@
                     <asp:TextBox ID="txtEmailPessoa" runat="server" Height="30px" Width="300px"></asp:TextBox></td>
             </tr>
             <tr>
-                <td></td>
+                <td>
+                    <label>senha do Usuário</label>
+                    <asp:TextBox ID="txtPassword" runat="server" Height="30px" Width="300px" TextMode="Password"></asp:TextBox></td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label Visible="false" runat="server" ID="lblNewPassword">nova senha do Usuário</asp:Label>
+                    <asp:TextBox ID="txtNewPassword" runat="server" Height="30px" Width="300px" Visible="false" TextMode="Password"></asp:TextBox></td>
             </tr>
             <tr>
                 <td>

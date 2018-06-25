@@ -7,7 +7,7 @@ namespace testedotatec
     public partial class _Default : Page
     {
         Conexao c;
-        private string sql = "select * from TB_USER";
+        private string sql = "select * from tb_pessoa";
         private string user, senha;
         protected void Page_Load(object sender, EventArgs e)
         {}
@@ -18,7 +18,7 @@ namespace testedotatec
             this.user = txtLogin.UserName;
             this.senha = txtLogin.Password;
             
-            sql+= " where usuario = '" + user + "' and senha= '" + senha + "'";
+            sql+= " where cpf_pessoa = '" + user + "' and password= '" + senha + "'";
             var resultado = c.consultar(sql);
             if (resultado.HasRows)
             {
