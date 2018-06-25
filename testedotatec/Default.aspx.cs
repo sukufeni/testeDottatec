@@ -23,7 +23,7 @@ namespace testedotatec
             if (resultado.HasRows)
             {
                 Session["logado"] = true;
-                Response.Redirect("ListaPessoas.aspx");
+                Response.Redirect("pages/ListaPessoas.aspx");
             }
             else Alert.Show("Verifique os Campos e tente novamente!");
         }

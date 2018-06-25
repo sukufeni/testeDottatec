@@ -147,8 +147,11 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
-    <Content Include="Images\dottatec_logo_branca2.png" />
-    <Content Include="favicon.ico" />
+    <Content Include="Images\icon_edit.png" />
+    <Content Include="Images\ico_excluir.gif" />
+    <Content Include="pages\DetalhesPessoa.aspx" />
+    <Content Include="dottatec_logo_branca2.png" />
+    <Content Include="Images\favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -186,7 +189,7 @@
     </Content>
     <None Include="Properties\PublishProfiles\testedotatec - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="ListaPessoas.aspx" />
+    <Content Include="pages\ListaPessoas.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -238,6 +241,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="pages\DetalhesPessoa.aspx.cs">
+      <DependentUpon>DetalhesPessoa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\DetalhesPessoa.aspx.designer.cs">
+      <DependentUpon>DetalhesPessoa.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ds_Login.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -246,11 +256,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ListaPessoas.aspx.cs">
+    <Compile Include="pages\ListaPessoas.aspx.cs">
       <DependentUpon>ListaPessoas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ListaPessoas.aspx.designer.cs">
+    <Compile Include="pages\ListaPessoas.aspx.designer.cs">
       <DependentUpon>ListaPessoas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -263,12 +273,14 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
